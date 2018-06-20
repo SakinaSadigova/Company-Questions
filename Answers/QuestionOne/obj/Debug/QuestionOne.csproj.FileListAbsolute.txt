@@ -1,0 +1,7 @@
+C:\Users\myuser\source\repos\Questions\QuestionOne\bin\Debug\QuestionOne.exe.config
+C:\Users\myuser\source\repos\Questions\QuestionOne\bin\Debug\QuestionOne.exe
+C:\Users\myuser\source\repos\Questions\QuestionOne\bin\Debug\QuestionOne.pdb
+C:\Users\myuser\source\repos\Questions\QuestionOne\obj\Debug\QuestionOne.csprojResolveAssemblyReference.cache
+C:\Users\myuser\source\repos\Questions\QuestionOne\obj\Debug\QuestionOne.csproj.CoreCompileInputs.cache
+C:\Users\myuser\source\repos\Questions\QuestionOne\obj\Debug\QuestionOne.exe
+C:\Users\myuser\source\repos\Questions\QuestionOne\obj\Debug\QuestionOne.pdb
