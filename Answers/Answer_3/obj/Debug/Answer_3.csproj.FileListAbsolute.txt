@@ -1,0 +1,14 @@
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\Answer_3.exe.config
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\Answer_3.exe
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\Answer_3.pdb
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.csprojResolveAssemblyReference.cache
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.Form1.resources
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.Properties.Resources.resources
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.csproj.GenerateResource.Cache
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.csproj.CoreCompileInputs.cache
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.exe
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\obj\Debug\Answer_3.pdb
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\EntityFramework.dll
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\EntityFramework.xml
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_3\bin\Debug\EntityFramework.SqlServer.xml

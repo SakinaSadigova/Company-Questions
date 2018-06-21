@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DiagnosisDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Illnesses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="IllnessSymptom">
+    <Key>
+      <PropertyRef Name="Illnesses_id" />
+      <PropertyRef Name="Symptoms_Id" />
+    </Key>
+    <Property Name="Illnesses_id" Type="int" Nullable="false" />
+    <Property Name="Symptoms_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Symptoms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_IllnessSymptom_Illness">
+    <End Role="Illnesses" Type="Self.Illnesses" Multiplicity="1" />
+    <End Role="IllnessSymptom" Type="Self.IllnessSymptom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Illnesses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IllnessSymptom">
+        <PropertyRef Name="Illnesses_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IllnessSymptom_Symptom">
+    <End Role="Symptoms" Type="Self.Symptoms" Multiplicity="1" />
+    <End Role="IllnessSymptom" Type="Self.IllnessSymptom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Symptoms">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IllnessSymptom">
+        <PropertyRef Name="Symptoms_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DiagnosisDbModelStoreContainer">
+    <EntitySet Name="Illnesses" EntityType="Self.Illnesses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IllnessSymptom" EntityType="Self.IllnessSymptom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Symptoms" EntityType="Self.Symptoms" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IllnessSymptom_Illness" Association="Self.FK_IllnessSymptom_Illness">
+      <End Role="Illnesses" EntitySet="Illnesses" />
+      <End Role="IllnessSymptom" EntitySet="IllnessSymptom" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IllnessSymptom_Symptom" Association="Self.FK_IllnessSymptom_Symptom">
+      <End Role="Symptoms" EntitySet="Symptoms" />
+      <End Role="IllnessSymptom" EntitySet="IllnessSymptom" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

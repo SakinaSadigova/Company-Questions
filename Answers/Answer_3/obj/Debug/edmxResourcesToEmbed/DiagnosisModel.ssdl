@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DiagnosisModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DiagnosisModelStoreContainer">
+    <EntitySet Name="Illnesses" EntityType="DiagnosisModel.Store.Illnesses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Symptoms" EntityType="DiagnosisModel.Store.Symptoms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="DiagnosisModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IllnessSymptom" EntityType="DiagnosisModel.Store.IllnessSymptom" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_IllnessSymptom_Illness" Association="DiagnosisModel.Store.FK_IllnessSymptom_Illness">
+      <End Role="Illness" EntitySet="Illnesses" />
+      <End Role="IllnessSymptom" EntitySet="IllnessSymptom" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IllnessSymptom_Symptom" Association="DiagnosisModel.Store.FK_IllnessSymptom_Symptom">
+      <End Role="Symptom" EntitySet="Symptoms" />
+      <End Role="IllnessSymptom" EntitySet="IllnessSymptom" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Illnesses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Symptoms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="IllnessSymptom">
+    <Key>
+      <PropertyRef Name="Illnesses_id" />
+      <PropertyRef Name="Symptoms_Id" />
+    </Key>
+    <Property Name="Illnesses_id" Type="int" Nullable="false" />
+    <Property Name="Symptoms_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_IllnessSymptom_Illness">
+    <End Role="Illness" Type="DiagnosisModel.Store.Illnesses" Multiplicity="1" />
+    <End Role="IllnessSymptom" Type="DiagnosisModel.Store.IllnessSymptom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Illness">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IllnessSymptom">
+        <PropertyRef Name="Illnesses_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IllnessSymptom_Symptom">
+    <End Role="IllnessSymptom" Type="DiagnosisModel.Store.IllnessSymptom" Multiplicity="*" />
+    <End Role="Symptom" Type="DiagnosisModel.Store.Symptoms" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Symptom">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IllnessSymptom">
+        <PropertyRef Name="Symptoms_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

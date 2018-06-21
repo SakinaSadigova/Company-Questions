@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DiagnosisDbModelStoreContainer" CdmEntityContainer="DiagnosisDbEntities">
+    <EntitySetMapping Name="Illnesses">
+      <EntityTypeMapping TypeName="DiagnosisDbModel.Illness">
+        <MappingFragment StoreEntitySet="Illnesses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Symptoms">
+      <EntityTypeMapping TypeName="DiagnosisDbModel.Symptom">
+        <MappingFragment StoreEntitySet="Symptoms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="IllnessSymptom" TypeName="DiagnosisDbModel.IllnessSymptom" StoreEntitySet="IllnessSymptom">
+      <EndProperty Name="Illnesses">
+        <ScalarProperty Name="id" ColumnName="Illnesses_id" />
+      </EndProperty>
+      <EndProperty Name="Symptoms">
+        <ScalarProperty Name="Id" ColumnName="Symptoms_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

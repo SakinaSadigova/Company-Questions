@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DiagnosisModelStoreContainer" CdmEntityContainer="DiagnosisEntities">
+    <EntitySetMapping Name="Illnesses">
+      <EntityTypeMapping TypeName="IsTypeOf(DiagnosisModel.Illness)">
+        <MappingFragment StoreEntitySet="Illnesses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Symptoms">
+      <EntityTypeMapping TypeName="IsTypeOf(DiagnosisModel.Symptom)">
+        <MappingFragment StoreEntitySet="Symptoms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(DiagnosisModel.sysdiagram)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="IllnessSymptom" TypeName="DiagnosisModel.IllnessSymptom" StoreEntitySet="IllnessSymptom">
+      <EndProperty Name="Illness">
+        <ScalarProperty Name="id" ColumnName="Illnesses_id" />
+      </EndProperty>
+      <EndProperty Name="Symptom">
+        <ScalarProperty Name="Id" ColumnName="Symptoms_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

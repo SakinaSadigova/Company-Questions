@@ -5,3 +5,10 @@ C:\Users\myuser\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.csp
 C:\Users\myuser\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.csproj.CoreCompileInputs.cache
 C:\Users\myuser\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.exe
 C:\Users\myuser\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.pdb
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\bin\Debug\Answer_2.exe.config
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\bin\Debug\Answer_2.exe
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\bin\Debug\Answer_2.pdb
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.csprojResolveAssemblyReference.cache
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.csproj.CoreCompileInputs.cache
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.exe
+C:\Users\Qonaq\Desktop\CompanyQuestions\Answers\Answer_2\obj\Debug\Answer_2.pdb
